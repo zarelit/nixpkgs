@@ -23,6 +23,15 @@ let
 
   buildPythonApplication = args: buildPythonPackage ({namePrefix="";} // args );
 
+  buildPyPIPackage = makeOverridable (callPackage ../development/python-modules/generic/buildpypi.nix {
+    buildPythonPackage = buildPythonPackage;
+
+  });
+
+  buildPyPIApplication = makeOverridable (callPackage ../development/python-modules/generic/buildpypi.nix {
+    buildPythonPackage = buildPythonApplication;
+  });
+
   # Unique python version identifier
   pythonName =
     if isPy26 then "python26" else
