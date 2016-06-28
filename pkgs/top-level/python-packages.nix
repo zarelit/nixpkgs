@@ -22640,11 +22640,6 @@ in modules // {
     propagatedBuildInputs = with self; [ py virtualenv pluggy ];
 
     doCheck = false;
-
-    src = pkgs.fetchurl {
-      url = "mirror://pypi/t/tox/${name}.tar.gz";
-      sha256 = "1vj73ar4rimq3fwy5r2z3jv4g9qbh8rmpmncsc00g0k310acqzxz";
-    };
   };
 
   tqdm = buildPythonPackage rec {
