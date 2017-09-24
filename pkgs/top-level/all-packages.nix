@@ -16472,6 +16472,8 @@ with pkgs;
 
   tint2 = callPackage ../applications/misc/tint2 { };
 
+  tipp10 = callPackage ../applications/misc/tipp10 { };
+
   tkcvs = callPackage ../applications/version-management/tkcvs { };
 
   tla = callPackage ../applications/version-management/arch { };
