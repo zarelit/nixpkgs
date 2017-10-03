@@ -19,6 +19,8 @@ in
     patches = [./defines.patch];
     postPatch = ''
       substituteAllInPlace def/defines.h
+      substituteInPlace tipp10.desktop \
+          --replace tipp10.png $out/data/tipp10.png
     '';
 
     enableParallelBuilding = true;
@@ -27,8 +29,8 @@ in
     installPhase = ''
       install -Dm755 tipp10 "$out/bin/tipp10"
       install -Dm644 release/tipp10v2.template "$out/data/tipp10v2.template"
-      #install -Dm644 tipp10.png "$out/share/icons/tipp10.png"
-      #cp -R $desktop/share/applications/* $out/share/applications
+      install -Dm644 tipp10.png "$out/data/tipp10.png"
+      install -Dm644 tipp10.desktop "$out/share/applications/tipp10.desktop"
       #cp -R release/help $out*/
     '';
 
