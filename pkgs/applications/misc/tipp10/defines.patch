@@ -1,5 +1,5 @@
 diff --git a/def/defines.h b/def/defines.h
-index 39d0658..fb4998d 100644
+index 39d0658..844f4f2 100644
 --- a/def/defines.h
 +++ b/def/defines.h
 @@ -27,9 +27,9 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
@@ -7,10 +7,11 @@ index 39d0658..fb4998d 100644
  
  // OS constants
 -#define APP_WIN						true
-+#define APP_WIN						false
- #define APP_MAC						false
+-#define APP_MAC						false
 -#define APP_X11						false
-+#define APP_X11						true
++#define APP_WIN						false
++#define APP_MAC						!@linux@
++#define APP_X11						 @linux@
  #define APP_PORTABLE				false //at least one of the 3 OS must be true too!
  
  // Languages
