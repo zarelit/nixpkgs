@@ -1,7 +1,6 @@
 {stdenv, fetchFromGitHub, qt4, qmake4Hook }:
 with stdenv;
 let
-  darwin = lib.boolToString isDarwin;
   linux = lib.boolToString isLinux;
 in
   mkDerivation rec {
@@ -14,8 +13,6 @@ in
       sha256 = "0b18zsmsm7pjc4fz1imfydj1nczsvgg6yd96acv57gal6xsbyksb";
     };
 
-
-    linux = "true";
     patches = [./defines.patch];
     postPatch = ''
       substituteAllInPlace def/defines.h
