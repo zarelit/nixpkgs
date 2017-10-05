@@ -1,5 +1,5 @@
 diff --git a/def/defines.h b/def/defines.h
-index 39d0658..844f4f2 100644
+index 39d0658..a494f67 100644
 --- a/def/defines.h
 +++ b/def/defines.h
 @@ -27,9 +27,9 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
@@ -20,7 +20,7 @@ index 39d0658..844f4f2 100644
  #define APP_NAME 					"TIPP10"
  #define APP_URL 					"http://www.tipp10.com"
 -#define APP_DB 						"tipp10v2.template"
-+#define APP_DB 						"../data/tipp10v2.template"
++#define APP_DB 						"../share/appdata/tipp10v2.template"
  #define APP_USER_DB					"tipp10v2.db"
  
  // Update constants
